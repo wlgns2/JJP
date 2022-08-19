@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Login from "./component/login";
+import Rid from "./component/rid";
+import Rpass from "./component/rpass";
+import MamBer from "./component/mamber";
+import { BrowserRouter, Route, Routes, Switch } from "react-router-dom";
+import { Home } from "./pages";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Main">
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+        <Route path="/Rid">
+          <Rid />
+        </Route>
+        <Route path="/Rapss">
+          <Rpass />
+        </Route>
+        <Route path="/MamBer">
+          <MamBer />
+        </Route>
+      </Switch>
     </div>
   );
 }
